@@ -29,3 +29,18 @@ Requesting feedback about a specific part of your submission.
 What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 What went really well and what could have gone better?
+
+## Further ideas:
+
+link to group project Hot Takes: this used TMDb, would be a cool feature to grab Hot Takes from there
+
+Autofill forms based on "is movie title in TMDb list" - stop users entering whatever data they want into database - ID by # and render title from that, rather than storing strings
+
+## References
+
+Conditional rendering
+https://react.dev/learn/conditional-rendering
+
+Generating tables in HTML
+https://stackoverflow.com/questions/48015812/react-render-data-in-a-table
+https://www.valentinog.com/blog/html-table/
