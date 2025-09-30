@@ -7,11 +7,14 @@ export default function AddMoviesForm() {
     console.log(userName);
     console.log("movieTitle:", movieTitle);
     try {
-      const res = await fetch("http://localhost:8080/add-movies", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ movieTitle, userName }),
-      });
+      const res = await fetch(
+        "https://week7-assignment-sdy4.onrender.com/add-movies",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ movieTitle, userName }),
+        }
+      );
       const data = await res.json();
 
       console.log("movie created:", data);

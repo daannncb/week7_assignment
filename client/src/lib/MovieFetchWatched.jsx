@@ -5,7 +5,9 @@ export default function MovieFetchWatched() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     async function getWatchedMovies() {
-      const res = await fetch("http://localhost:8080/get-watched"); //! CHANGE TO RENDER URL
+      const res = await fetch(
+        "https://week7-assignment-sdy4.onrender.com/get-watched"
+      );
       const movies = await res.json();
       console.log({ movies });
       setMovies(movies);
