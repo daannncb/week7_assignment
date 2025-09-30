@@ -9,7 +9,7 @@ export default function UserAddViewParent({ user, handleSubmit }) {
       <div id="home-add-view-options">
         {user ? (
           <>
-            <AddMoviesHome />
+            <AddMoviesHome user={user} />
             <ViewMoviesHome />
           </>
         ) : (

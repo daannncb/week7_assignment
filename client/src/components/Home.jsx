@@ -11,11 +11,14 @@ import UserAddViewParent from "./home_components/UserAddViewParent";
 
 export default function Home() {
   const [user, setUser] = useState("");
-  const handleSubmit = (userName) => setUser(userName);
+  const handleSubmit = (userName) => {
+    setUser(userName);
+  };
 
+  //confirm state is changing
   useEffect(() => {
     if (user) {
-      console.log("username updated in state:", user);
+      console.log("username updated state:", user);
     }
   }, [user]);
 

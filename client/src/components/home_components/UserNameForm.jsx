@@ -2,18 +2,32 @@
 
 //once user is selected, let them go into add movies or view movie list
 
-//conditional rendering is going to be useful here
-
 // import { useState } from "react";
-import AddMoviesHome from "./AddMoviesHome";
-import ViewMoviesHome from "./ViewMoviesHome";
+// import AddMoviesHome from "./AddMoviesHome";
+// import ViewMoviesHome from "./ViewMoviesHome";
 
 export default function UserNameForm({ handleSubmit }) {
-  function userSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  async function userSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
     const userName = formData.get("userName");
-    handleSubmit(userName);
+    console.log("userName:", userName);
+
+    try {
+      await fetch("http://localhost:8080/add-user", {
+        //!change to render url
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userName }),
+      });
+
+      handleSubmit(userName);
+      sessionStorage.setItem("user", userName);
+      console.log("session storage user", sessionStorage.getItem("user"));
+      console.log("User created:", userName);
+    } catch (error) {
+      console.error("error adding user", error);
+    }
   }
 
   return (
@@ -24,23 +38,3 @@ export default function UserNameForm({ handleSubmit }) {
     </form>
   );
 }
-
-// return (
-//     <div id="user-name-input">
-//       {user ? (
-//         <****add and view options**** />
-//       ) : (
-//         <div>Enter your username:</div> with a form
-//       )}
-//     </div>
-//   );
-
-//! AddMoviesHome & ViewMoviesHome to render when user has entered their username.
-//? AddMoviesHome has link to AddMovies > react router link
-//? ViewMoviesHome has link to ViewMovies > react router link
-
-//
-//TODO
-//?asd
-//!
-//*

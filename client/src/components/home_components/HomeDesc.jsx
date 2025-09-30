@@ -13,7 +13,7 @@ export default function HomeDesc() {
         </div>
         <div className="home-instructions">
           Please enter your username below, and then go to add movies to start
-          tracking the movies you're desparate to see!
+          tracking the movies you're desperate to see!
         </div>
       </main>
     </>

@@ -44,3 +44,15 @@ https://react.dev/learn/conditional-rendering
 Generating tables in HTML
 https://stackoverflow.com/questions/48015812/react-render-data-in-a-table
 https://www.valentinog.com/blog/html-table/
+
+SQL keys
+https://www.cockroachlabs.com/blog/what-is-a-foreign-key/
+
+I chose to make a merged table of my user and movie data for easier querying
+
+https://chipcullen.com/how-to-post-data-with-fetch-api/
+
+https://www.robinwieruch.de/local-storage-react/
+
+https://dev.to/darkmavis1980/the-returning-clause-in-sql-11k2
+https://www.tutorialspoint.com/javascript-get-row-count-of-an-html-table
