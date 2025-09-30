@@ -14,7 +14,7 @@ export default function UserNameForm({ handleSubmit }) {
     console.log("userName:", userName);
 
     try {
-      await fetch("http://localhost:8080/add-user", {
+      await fetch("https://week7-assignment-sdy4.onrender.com/add-user", {
         //!change to render url
         method: "POST",
         headers: { "Content-Type": "application/json" },
